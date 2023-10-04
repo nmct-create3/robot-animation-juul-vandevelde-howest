@@ -142,11 +142,6 @@ body {
 
 .c-robot {
   max-width: 18.75rem;
-  --c-robot-animation-duration: 0.75s;
-  --c-robot-animation-timing-function: ease-in-out;
-  --c-robot-animation-iteration-count: infinite;
-  --c-robot-animation-direction: alternate;
-  --c-robot-animation-play-state: running;
   fill: var(--global-color-front);
 }
 
@@ -155,39 +150,6 @@ body {
   opacity: 0.1;
 }
 
-/* .c-pause:checked + .c-robot {
-  --c-robot-animation-play-state: paused;
-} */
-
-body:has(input:checked) .c-robot {
-  --c-robot-animation-play-state: paused;
-}
-
-#Robot {
-  animation: robotHover var(--c-robot-animation-duration) var(--c-robot-animation-timing-function) var(--c-robot-animation-iteration-count) var(--c-robot-animation-direction);
-  animation-play-state: var(--c-robot-animation-play-state);
-}
-
-#Shadow {
-  animation: shadowPulse var(--c-robot-animation-duration) var(--c-robot-animation-timing-function) var(--c-robot-animation-iteration-count) var(--c-robot-animation-direction);
-  transform-origin: 50% 100%;
-  animation-play-state: var(--c-robot-animation-play-state);
-}
-
-@keyframes shadowPulse {
-  100% {
-    transform: scale(0.75);
-  }
-}
-
-@keyframes robotHover {
-  0% {
-    transform: translateY(2.5%);
-  }
-  100% {
-    transform: translateY(-2.5%);
-  }
-}
 
 /*
     Component: Controls
